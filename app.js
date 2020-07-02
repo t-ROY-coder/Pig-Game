@@ -10,3 +10,5 @@ GAME RULES:
 var score, roundScore, activeScore
 score = [0, 0]
 roundScore, activeScore = 0
+
+dice = 0;
