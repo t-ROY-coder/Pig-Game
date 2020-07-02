@@ -60,6 +60,4 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
     }
 })
 
-document.querySelector('.btn-new').addEventListener('click', function() {
-    newGame()
-})
+document.querySelector('.btn-new').addEventListener('click', newGame)
