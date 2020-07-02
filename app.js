@@ -50,7 +50,14 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
     roundScore = 0
     document.querySelector('#score-' + activePlayer).textContent = score[activePlayer]
     document.querySelector('#current-' + activePlayer).textContent = roundScore
-    togglePlayer()
+    if (score[activePlayer] >= 20) {
+        document.querySelector('#name-' + activePlayer).textContent = 'WINNER!'
+        document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner')
+        document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active')
+        document.querySelector('.dice').style.display = 'none'
+    } else {
+        togglePlayer()
+    }
 })
 
 document.querySelector('.btn-new').addEventListener('click', function() {
